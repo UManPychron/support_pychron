@@ -1,0 +1,21 @@
+
+- plugin: Database
+  tests:
+    - test_pychron
+    - test_pychron_version
+    - test_massspec
+- plugin: LabBook
+  tests:
+- plugin: ArArConstants
+  tests:
+- plugin: ArgusSpectrometer
+  tests:
+    - test_communication
+    - test_intensity
+- plugin: ExtractionLine
+  tests:
+    - test_valve_communication
+    - test_gauge_communication
+- plugin: DVC
+  tests:
+    - test_dvc_fetch_meta
