@@ -1,0 +1,42 @@
+-
+  - name: HighVoltage
+    min: 0
+    max: 5000
+    compare: False
+  - name: ElectronEnergy
+    min: 0
+    max: 10
+    compare: True
+  - name: YSymmetry
+    min: 0
+    max: 10
+    compare: True
+  - name: ZSymmetry
+    min: 0
+    max: 10
+    compare: True
+  - name: ZFocus
+    min: 0
+    max: 10
+    compare: True
+  - name: IonRepeller
+    min: 0
+    max: 10
+    compare: True
+  - name: ExtractionLens
+    min: 0
+    max: 10
+    compare: True
+-
+  - name: H2
+    compare: True
+  - name: H1
+    compare: True
+  - name: AX
+    compare: True
+  - name: L1
+    compare: True
+  - name: L2
+    compare: True
+  - name: CDD
+    compare: True

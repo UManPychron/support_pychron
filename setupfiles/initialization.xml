@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='ASCII'?>
+<root>
+    <globals>
+        <recall_debug>False</recall_debug>
+        <system_monitor_debug>False</system_monitor_debug>
+        <figure_debug>False</figure_debug>
+        <use_ipc>False</use_ipc>
+        <use_startup_tests>True</use_startup_tests>
+        <experiment_debug>False</experiment_debug>
+        <ignore_initialization_warnings>False</ignore_initialization_warnings>
+        <ignore_initialization_questions>False</ignore_initialization_questions>
+        <ignore_initialization_required>False</ignore_initialization_required>
+        <communication_simulation>False</communication_simulation>
+        <dashboard_simulation>False</dashboard_simulation>
+        <random_tip_enabled>True</random_tip_enabled>
+    </globals>
+    <plugins>
+        <general>
+            <plugin enabled="false">PyScript</plugin>
+            <plugin enabled="false">Database</plugin>
+            <plugin enabled="true">Entry</plugin>
+            <plugin enabled="false">ArArConstants</plugin>
+            <plugin enabled="false">Loading</plugin>
+            <plugin enabled="false">LabBook</plugin>
+            <plugin enabled="false">DashboardServer</plugin>
+            <plugin enabled="false">DashboardClient</plugin>
+            <plugin enabled="True">Experiment
+              <mode>client</mode>
+            </plugin>
+            <plugin enabled="true">Update</plugin>
+        </general>
+        <hardware>
+            <plugin enabled="true">ArgusSpectrometer</plugin>
+            <plugin enabled="true">ExtractionLine</plugin>
+        </hardware>
+        <social>
+            <plugin enabled="true">Email</plugin>
+        </social>
+    </plugins>
+</root>
