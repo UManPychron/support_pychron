@@ -1,106 +1,36 @@
+<?xml version='1.0' encoding='ASCII'?>
 <root>
-    <group>co2
-         <valve query_state="false">A
-            <description>CO2 Laser to Jan</description>
-        </valve>
-        <valve query_state="false">F
-            <description>CO2 Laser to Obama</description>
-        </valve>
-        <valve query_state="false">G
-            <description>CO2 Laser to Roughing</description>
-        </valve>
-    </group>
-    <group>bone
-        <valve query_state="false">C
-            <description>Bone to Turbo</description>
-        </valve>
-        <valve query_state="false">B
-            <description>Bone to Diode Laser</description>
-        </valve>
-        <valve query_state="false">E
-            <description>Bone to Minibone</description>
-        </valve>
-        <valve query_state="false">D
-            <description>Bone to CO2 Laser</description>
-        </valve>
-        <valve query_state="false">H
-            <description>Obama Inlet</description>
-        </valve>
-        <valve query_state="false">N
-            <description>Bone to Getter GP-50</description>
-        </valve>
-    </group>
-    <group>mini
-        <valve query_state="false">I
-            <description>Minibone to Bone</description>
-        </valve>
-        <valve query_state="false">P
-            <description>Minibone to Turbo</description>
-        </valve>
-        <valve query_state="false">W
-            <interlock>X</interlock>
-            <description>Outer Pipette 1</description>
-        </valve>
-        <valve query_state="false">X
-            <interlock>W</interlock>
-            <description>Inner Pipette 1</description>
-        </valve>
-        <valve query_state="false">Y
-            <interlock>Z</interlock>
-            <description>Outer Pipette 2</description>
-        </valve>
-        <valve query_state="false">Z
-            <interlock>Y</interlock>
-            <description>Inner Pipette 2</description>
-        </valve>
-        <valve query_state="false">Q
-            <description>Quad Inlet</description>
-        </valve>
-    </group>
-    <group>micro
-        <valve query_state="false">R
-            <description>Jan Inlet</description>
-        </valve>
-        <valve query_state="false">S
-            <description>Microbone to Inlet Pipette</description>
-        </valve>
-        <valve query_state="false">L
-            <description>Microbone to Minibone</description>
-        </valve>
-        <valve query_state="false">M
-            <description>Microbone to Getter NP-10</description>
-        </valve>
-        <valve query_state="false">U
-            <description>Microbone to Turbo</description>
-        </valve>
-        <valve query_state="false">T
-            <description>Microbone to CO2 Laser</description>
-        </valve>
-        <valve query_state="false">K
-            <description>Microbone to Getter D-50</description>
-        </valve>
-    </group>
-    <valve query_state="true">V
-        <description>Obama Ion Pump</description>
-    </valve>
-    <valve query_state="true">O
-        <description>Jan Ion Pump</description>
-    </valve>
-    
-    <!--
-    <switch>AA
-      <actuator>apis_controller</actuator>
-      <description>apis external pumping</description>
-      <parent>U</parent>
-    </switch>
-    -->
-    
-     <pipette>Air
-    <inner>Z</inner>
-    <outer>Y</outer>
-    </pipette>
-    <pipette>Cocktail
-    <inner>X</inner>
-    <outer>W</outer>
-    </pipette>
+  <valve>A<address>Valve AUX 1 Set</address><description>Inlet 1</description></valve>
+  <valve>B<address>Valve AUX 2 Set</address><description>Inlet 2</description></valve>
+  <valve>C<address>Valve Inlet Set</address><description>ExtrToMS</description></valve>
+  <valve>D<address>Valve Ion Pump Prep Set</address><description>Ion Pump</description></valve>
+  <valve>E<address>Valve Ion Pump Set</address><description>MSIonPump</description></valve>
+
+  #Air
+  <valve>F<address>Pipet Air Out Set</address><description>Air Outer</description></valve>
+  <valve>G<address>Pipet Air In Set</address><description>Air Inner</description></valve>
+
+  #Ref (Ar)
+  <valve>H<address>Pipet Ref. Out Set</address><description>Ar Outer</description></valve>
+  <valve>I<address>Pipet Ref. In Set</address><description>Ar Inner</description></valve>
+
+  <switch>J<address>Getter manual 1 Degas Set</address><description>Getter manual 1 Degas</description></switch>
+  <switch>K<address>Getter manual 1 Operate Set</address><description>Getter manual 1 Operate</description></switch>
+  <switch>L<address>Getter manual 2 Degas Set</address><description>Getter manual 2 Degas</description></switch>
+  <switch>M<address>Getter manual 2 Operate Set</address><description>Getter manual 2 Operate</description></switch>
+  <switch>N<address>Getter AUX 1 Degas Set</address><description>Getter AUX 1 Degas</description></switch>
+  <switch>O<address>Getter AUX 1 Operate Set</address><description>Getter AUX 1 Operate</description></switch>
+  <switch>P<address>Getter AUX 2 Degas Set</address><description>Getter AUX 2 Degas</description></switch>
+  <switch>Q<address>Getter AUX 2 Operate Set</address><description>Getter AUX 2 Operate</description></switch>
+  <switch>R<address>Ion Gauge Prep enable / disable Set</address><description>Prep IG</description></switch>
+  <switch>S<address>Ion Gauge MS enable / disable Set</address><description>MS IG</description></switch>
+
+  <pipette>Air
+   <inner>G</inner>
+   <outer>F</outer>
+  </pipette>
+  <pipette>Ar
+   <inner>I</inner>
+   <outer>H</outer>
+  </pipette>
 </root>
