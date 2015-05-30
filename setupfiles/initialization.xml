@@ -32,8 +32,8 @@
         <hardware>
             <plugin enabled="true">ArgusSpectrometer</plugin>
             <plugin enabled="true">ExtractionLine
-                <manager enabled="true">valve_manager
-                  <device enabled="true">valve_controller</device>
+                <manager enabled="true">switch_manager
+                  <device enabled="true">switch_controller</device>
                 </manager>
                 <manager enabled="true">gauge_manager
                   <device enabled="true">qtegra_gauge_controller
