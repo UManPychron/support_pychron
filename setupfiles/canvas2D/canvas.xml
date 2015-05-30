@@ -104,19 +104,24 @@
     </connection>
 
     <!-- switches -->
-    <valve>J
-        <translation>-11,18</translation>
-    </valve>
-    <valve>K
-        <translation>-7.5,18</translation>
-    </valve>
+    <switch>J
+        <translation>-12,18</translation>
+        <slabel offset="10,22">Degas
+        </slabel>
+    </switch>
+    <switch>K
+        <translation>-8.5,18</translation>
+        <slabel offset="15,22">Operate</slabel>
+    </switch>
 
-    <valve>L
-        <translation>-3.5,18</translation>
-    </valve>
-    <valve>M
-        <translation>0,18</translation>
-    </valve>
+    <switch>L
+        <translation>-2.5,18</translation>
+        <slabel offset="10,22">Degas</slabel>
+    </switch>
+    <switch>M
+        <translation>1,18</translation>
+        <slabel offset="15,22">Operate</slabel>
+    </switch>
 
     <!-- getter Aux-->
     <getter>Aux 1
@@ -129,11 +134,20 @@
     </getter>
     <connection orientation='vertical'>
         <start>Aux 1</start>
+        <end>A</end>
+    </connection>
+    <connection orientation='vertical'>
+        <start>Aux 2</start>
+        <end>B</end>
+    </connection>
+
+    <connection orientation='vertical'>
+        <start>A</start>
         <end>Analytical</end>
     </connection>
 
     <connection orientation='vertical'>
-        <start>Aux 2</start>
+        <start>B</start>
         <end>Analytical</end>
     </connection>
 
@@ -145,27 +159,31 @@
     </valve>
 
     <!-- switches -->
-    <valve>N
-        <translation>-14.5,-13</translation>
-    </valve>
-    <valve>O
-        <translation>-11,-13</translation>
-    </valve>
+    <switch>N
+        <translation>-14.5,-12</translation>
+        <slabel offset="10,-22">Degas</slabel>
+    </switch>
+    <switch>O
+        <translation>-11,-12</translation>
+        <slabel offset="15,-22">Operate</slabel>
+    </switch>
 
-    <valve>P
-        <translation>-3.5,-13</translation>
-    </valve>
-    <valve>Q
-        <translation>0,-13</translation>
-    </valve>
+    <switch>P
+        <translation>-3.5,-12</translation>
+        <slabel offset="10,-22">Degas</slabel>
+    </switch>
+    <switch>Q
+        <translation>0,-12</translation>
+        <slabel offset="15,-22">Operate</slabel>
+    </switch>
 
 
     <!-- Pipettes -->
     <valve>H
-        <translation>3.0,-15.25</translation>
+        <translation>4.0,-15.25</translation>
     </valve>
     <valve>I
-        <translation>3.0,-20.25</translation>
+        <translation>4.0,-20.25</translation>
     </valve>
     <valve>F
         <translation>7.0,-15.25</translation>
@@ -195,7 +213,7 @@
     <!--tanks-->
     <tank>Ar
       <color>59, 163, 166</color>
-        <translation>0,-23</translation>
+        <translation>1,-23</translation>
         <dimension>5,2</dimension>
         <connection orientation="vertical">
             <start>I</start>
@@ -205,7 +223,7 @@
     <pipette display_name="">ArPipette
     	  <color>59, 163, 166</color>
         <!--<color>59, 163, 120</color>-->
-        <translation>3,-17.75</translation>
+        <translation>4,-17.75</translation>
         <dimension>2,2</dimension>
         <!--<vlabel>Shots={:04n}
             <font>modern 10</font>
