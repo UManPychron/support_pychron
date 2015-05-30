@@ -31,7 +31,16 @@
         </general>
         <hardware>
             <plugin enabled="true">ArgusSpectrometer</plugin>
-            <plugin enabled="true">ExtractionLine</plugin>
+            <plugin enabled="true">ExtractionLine
+                <manager enabled="true">valve_manager
+                  <device enabled="true">valve_controller</device>
+                </manager>
+                <manager enabled="true">gauge_manager
+                  <device enabled="true">qtegra_gauge_controller
+                  <klass>QtegraMicroIonController</klass>
+                  </device>
+                </manager>
+            </plugin>
         </hardware>
         <social>
             <plugin enabled="true">Email</plugin>
