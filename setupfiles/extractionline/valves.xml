@@ -41,6 +41,9 @@
   <switch>R<address>Ion Gauge Prep enable / disable Set</address><description>Prep IG</description></switch>
   <switch>S<address>Ion Gauge MS enable / disable Set</address><description>MS IG</description></switch>
 
+  <manual_valve>T<description>CO2 Inlet</description></manual_valve>
+  <manual_valve>U<description>Excimer Inlet</description></manual_valve>
+  
   <pipette>Air
    <inner>G</inner>
    <outer>F</outer>
