@@ -4,7 +4,7 @@
     <!--Argus -->
     <spectrometer>Argus
         <color>85,110,255,255</color>
-        <translation>19.0,5.0</translation>
+        <translation>19.0,5</translation>
         <dimension>5,5</dimension>
         <volume>650</volume>
     </spectrometer>
@@ -124,7 +124,7 @@
         <dimension>4,2</dimension>
     </getter>
     <getter>Aux 2
-        <translation>-3,-10</translation>
+        <translation>-4,-10</translation>
         <dimension>4,2</dimension>
     </getter>
     <connection orientation='vertical'>
@@ -145,10 +145,10 @@
     </connection>
 
     <valve>A
-        <translation>-14,-5</translation>
+        <translation>-14,-3</translation>
     </valve>
     <valve>B
-        <translation>-3,-5</translation>
+        <translation>-4,-3</translation>
     </valve>
 
     <!-- switches -->
@@ -162,27 +162,27 @@
     </switch>
 
     <switch>P
-        <translation>-3.5,-12</translation>
+        <translation>-4.5,-12</translation>
         <slabel offset="10,-22">Degas</slabel>
     </switch>
     <switch>Q
-        <translation>0,-12</translation>
+        <translation>-1,-12</translation>
         <slabel offset="15,-22">Operate</slabel>
     </switch>
 
 
     <!-- Pipettes -->
     <valve>H
-        <translation>4.0,-15.25</translation>
-    </valve>
-    <valve>I
-        <translation>4.0,-20.25</translation>
-    </valve>
-    <valve>F
         <translation>7.0,-15.25</translation>
     </valve>
-    <valve>G
+    <valve>I
         <translation>7.0,-20.25</translation>
+    </valve>
+    <valve>F
+        <translation>11.0,-15.25</translation>
+    </valve>
+    <valve>G
+        <translation>11.0,-20.25</translation>
     </valve>
 
     <!--
@@ -207,7 +207,7 @@
     <!--tanks-->
     <tank>Ar
       <color>59, 163, 166</color>
-        <translation>1,-23</translation>
+        <translation>4,-23</translation>
         <dimension>5,2</dimension>
         <connection orientation="vertical">
             <start>I</start>
@@ -217,7 +217,7 @@
     <pipette display_name="">ArPipette
     	  <color>59, 163, 166</color>
         <!--<color>59, 163, 120</color>-->
-        <translation>4,-17.75</translation>
+        <translation>7,-17.75</translation>
         <dimension>2,2</dimension>
         <!--<vlabel>Shots={:04n}
             <font>modern 10</font>
@@ -230,7 +230,7 @@
     </connection>
     <tank>Air
 	   <color>0, 195, 255</color>
-        <translation>7,-23</translation>
+        <translation>11,-23</translation>
         <dimension>5,2</dimension>
         <connection orientation="vertical">
             <start>G</start>
@@ -239,7 +239,7 @@
     </tank>
     <pipette display_name="">AirPipette
 	    <color>0, 195, 255</color>
-        <translation>7,-17.75</translation>
+        <translation>11,-17.75</translation>
         <dimension>2,2</dimension>
         <!--<vlabel>Shots={:04n}
             <font>modern 10</font>
@@ -262,6 +262,39 @@
         <right offset="1,1">F</right>
         <mid>Analytical</mid>
     </fork_connection>
+
+    <manual_valve>T
+        <translation>2.5,-7</translation>
+    </manual_valve>
+    <manual_valve>U
+        <translation>-20,-7</translation>
+    </manual_valve>
+    <connection orientation="horizontal">
+        <start>T</start>
+        <end offset="1.3,0">Aux 2</end>
+    </connection>
+
+    <connection orientation="horizontal">
+        <start>U</start>
+        <end offset="0.65,0">Aux 1</end>
+    </connection>
+
+    <laser>Excimer
+        <translation>-20.5,-20</translation>
+        <dimension>5,5</dimension>
+    </laser>
+    <connection orientation="vertical">
+        <start>U</start>
+        <end offset="0.65,0">Excimer</end>
+    </connection>
+    <laser>CO2
+        <translation>0,-20</translation>
+        <dimension>5,5</dimension>
+    </laser>
+    <connection orientation="vertical">
+        <start>T</start>
+        <end offset="0.65,0">CO2</end>
+    </connection>
 
     <!-- testing -->
     <!--
