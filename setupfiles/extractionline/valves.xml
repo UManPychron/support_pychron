@@ -7,12 +7,28 @@
   <valve>E<address>Valve Ion Pump Set</address><description>MSIonPump</description></valve>
 
   #Air
-  <valve>F<address>Pipet Air Out Set</address><description>Air Outer</description></valve>
-  <valve>G<address>Pipet Air In Set</address><description>Air Inner</description></valve>
+  <valve>F
+      <address>Pipet Air Out Set</address>
+      <description>Air Outer</description>
+      <interlock>G</interlock>
+  </valve>
+  <valve>G
+      <address>Pipet Air In Set</address>
+      <description>Air Inner</description>
+      <interlock>F</interlock>
+  </valve>
 
   #Ref (Ar)
-  <valve>H<address>Pipet Ref. Out Set</address><description>Ar Outer</description></valve>
-  <valve>I<address>Pipet Ref. In Set</address><description>Ar Inner</description></valve>
+  <valve>H
+      <address>Pipet Ref. Out Set</address>
+      <description>Ar Outer</description>
+      <interlock>I</interlock>
+  </valve>
+  <valve>I
+      <address>Pipet Ref. In Set</address>
+      <description>Ar Inner</description>
+      <interlock>H</interlock>
+  </valve>
 
   <switch>J<address>Getter manual 1 Degas Set</address><description>Getter manual 1 Degas</description></switch>
   <switch>K<address>Getter manual 1 Operate Set</address><description>Getter manual 1 Operate</description></switch>
