@@ -49,40 +49,43 @@
     <valve>D
        <translation>-14.0,6.0</translation>
     </valve>
+
     <connection orientation="vertical">
         <start>D</start>
         <end>Analytical</end>
     </connection>
+
     <stage>Analytical
       <translation>-14,0.0</translation>
         <dimension>25,3</dimension>
     </stage>
-
-    <!-- gauges -->
-    <gauge>Prep IG
-        <font>modern 10</font>
-        <translation>-20, 0</translation>
-        <dimension>3.5,2</dimension>
-    </gauge>
     <connection orientation='horizontal'>
         <start>Prep IG</start>
         <end>Analytical</end>
     </connection>
-    <valve>R
-        <translation>-23,0</translation>
-    </valve>
+
+    <!-- gauges -->
+    <gauge>Prep IG
+        <font>modern 10</font>
+        <translation>-20, 0.5</translation>
+        <dimension>3.5,2</dimension>
+    </gauge>
+
+    <switch>R
+        <translation>-22,1</translation>
+    </switch>
     <gauge>MS IG
         <font>modern 10</font>
-        <translation>20, 12</translation>
+        <translation>20, 12.5</translation>
         <dimension>3.5,2</dimension>
     </gauge>
     <connection orientation='vertical'>
         <start>MS IG</start>
         <end>Argus</end>
     </connection>
-    <valve>S
-        <translation>17,12</translation>
-    </valve>
+    <switch>S
+        <translation>18,13</translation>
+    </switch>
 
 
     <!-- getter Man-->
@@ -94,16 +97,7 @@
         <translation>-3,15</translation>
         <dimension>4,2</dimension>
     </getter>
-    <!--
-    <connection>
-        <start>Man 1</start>
-        <end>Man 2</end>
-    </connection>
-    <connection orientation='vertical'>
-        <start offset="9.5,0">Analytical</start>
-        <end offset="0,0.25">Man 2</end>
-    </connection>
-    -->
+
     <!-- switches -->
     <switch>J
         <translation>-12,18</translation>
@@ -134,19 +128,17 @@
         <dimension>4,2</dimension>
     </getter>
     <connection orientation='vertical'>
-        <start>Aux 1</start>
-        <end>A</end>
+        <start>A</start>
+        <end>Aux 1</end>
     </connection>
     <connection orientation='vertical'>
-        <start>Aux 2</start>
-        <end>B</end>
+        <start>B</start>
+        <end>Aux 2</end>
     </connection>
-
     <connection orientation='vertical'>
         <start>A</start>
         <end>Analytical</end>
     </connection>
-
     <connection orientation='vertical'>
         <start>B</start>
         <end>Analytical</end>
@@ -270,6 +262,20 @@
         <right offset="1,1">F</right>
         <mid>Analytical</mid>
     </fork_connection>
+
+    <!-- testing -->
+    <!--
+    <tee_connection>
+        <left offset="3.8,1">Aux 1</left>
+        <right offset="0,1">Aux 2</right>
+        <mid>Analytical</mid>
+    </tee_connection>
+    <tee_connection>
+        <left offset="1,1">D</left>
+        <right offset="1,1">A</right>
+        <mid offset="0,1.5">Prep IG</mid>
+    </tee_connection>
+    -->
     <!--LEGEND-->
     <!--
     <legend>
