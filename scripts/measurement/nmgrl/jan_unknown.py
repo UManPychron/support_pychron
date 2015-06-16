@@ -3,18 +3,18 @@
 baseline:
   after: true
   before: false
-  counts: 30
+  counts: 3
   detector: H1
   mass: 39.59
 default_fits: nominal
 equilibration:
-  eqtime: 15
-  inlet: C
+  eqtime: 5
+  inlet: R
   inlet_delay: 3
-  outlet: E
+  outlet: S
   use_extraction_eqtime: false
 multicollect:
-  counts: 50
+  counts: 5
   detector: H1
   isotope: Ar40
 peakcenter:
@@ -22,17 +22,27 @@ peakcenter:
   before: false
   detector: H1
   isotope: Ar40
-  detectors:
-    - H1
-    - AX
-    - CDD
 peakhop:
   hops_name: hop
-  use_peak_hop: false
+  use_peak_hop: true
 
 '''
+#this is commit three
+#equilibration
+#EQ_TIME= 5.0
+
+#PEAK HOP
+USE_PEAK_HOP= False
+#PEAK_HOPS=[((('Ar40','H1'),  'CDD'),  10),
+#           ((('Ar39','CDD')),         10),
+#           ((('Ar38', 'CDD')),        10),
+#           ((('Ar37', 'CDD')),        10),
+#           ((('Ar36', 'CDD')),        10),
+ #          ]
+
 
 ACTIVE_DETECTORS=('H2','H1','AX','L1','L2', 'CDD')
+#FITS=('Ar41:linear','Ar40:linear', 'Ar39:parabolic','Ar38:parabolic','Ar37:parabolic','Ar36:parabolic')
 
 def main():
     #this is a comment
@@ -45,13 +55,13 @@ def main():
 
     #set the spectrometer parameters
     #provide a value
-    #set_source_parameters(YSymmetry=10)
+    set_source_parameters(YSymmetry=10)
 
     #or leave blank and values are loaded from a config file (setupfiles/spectrometer/config.cfg)
-    #set_source_optics()
+    set_source_optics()
 
     #set the cdd operating voltage
-    #set_cdd_operating_voltage(100)
+    set_cdd_operating_voltage(100)
 
     if mx.peakcenter.before:
         peak_center(detector=mx.peakcenter.detector,isotope=mx.peakcenter.isotope)
@@ -61,6 +71,7 @@ def main():
 
     if mx.baseline.before:
         baselines(ncounts=mx.baseline.counts,mass=mx.baseline.mass, detector=mx.baseline.detector)
+
 
     #position mass spectrometer
     position_magnet(mx.multicollect.isotope, detector=mx.multicollect.detector)
@@ -84,16 +95,48 @@ def main():
     #set default regression
     set_fits()
     set_baseline_fits()
+    if USE_PEAK_HOP:
+        '''
 
-    #multicollect on active detectors
-    multicollect(ncounts=mx.multicollect.counts, integration_time=1)
+            hop = (Isotope, DetA)[,DetB,DetC...], counts
+
+            ex.
+            hops=[((('Ar40','H1'),'CDD'),  10),
+                  ((('Ar39','CDD')),       30),
+
+        '''
+        peak_hop(hops=PEAK_HOPS)
+    else:
+        #multicollect on active detectors
+        multicollect(ncounts=mx.multicollect.counts, integration_time=1)
 
     if mx.baseline.after:
         baselines(ncounts=mx.baseline.counts,mass=mx.baseline.mass, detector=mx.baseline.detector)
 
     if mx.peakcenter.after:
-        activate_detectors(*mx.peakcenter.detectors, **{'peak_center':True})
         peak_center(detector=mx.peakcenter.detector,isotope=mx.peakcenter.isotope)
     info('finished measure script')
 
 #========================EOF==============================================================
+    #peak_hop(detector='CDD', isotopes=['Ar40','Ar39','Ar36'], cycles=2, integrations=3)
+    #baselines(counts=50,mass=0.5, detector='CDD')s
+
+#isolate sniffer volume
+    # close('S')
+#     sleep(1)
+#
+#     #open to mass spec
+#     open('R')
+#
+#     set_time_zero()
+#     #display pressure wave
+#     sniff(5)
+#
+#     #define sniff/split threshold
+#     sniff_threshold=100
+#
+#     #test condition
+#     #if get_intensity('H1')>sniff_threshold:
+#     if True:
+#         gosub('splits:jan_split', klass='ExtractionLinePyScript')
+#

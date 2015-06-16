@@ -1,0 +1,1 @@
+""""""def main():    info('Quick Blank')    open(description='Inlet 1')    close(description='Prep IG')    sleep(10)    close(description='Ion Pump')    close(description='Inlet 2')    open(description='Getter manual 1 Operate')    sleep(4)    sleep(30)
